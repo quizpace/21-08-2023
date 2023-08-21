@@ -6,8 +6,27 @@
     <script>
 
 
+const yo = [];
 
+for (let i = 0; i < 10; i++) {
+    yo.push(Math.floor(Math.random() * 100) + 1);
+}
 
+console.log(yo);
+
+for (let i = 0; i < yo.length; i++) {
+    if (yo[i] % 2 === 0) {
+        document.write(`${yo[i]}<br />`);
+    }
+}
+
+const smallestNumber = Math.min(...yo);
+document.write(`<br /> Smallest number: ${smallestNumber}<br />`);
+
+const highestNumber = Math.max(...yo);
+document.write(`Highest number: ${highestNumber}<br />`);
+
+document.write(`<br / >${yo}`);
 
 
     </script>
