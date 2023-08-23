@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <script src="utils.js"></script>
+  </head>
+  <body>
+    <script>
+      function max_lists(capacity, max_random) {
+        const ran = [];
+
+        for (let i = 0; i < capacity; i++) {
+          ran.push(Math.floor(Math.random() * max_random) + 1);
+        }
+        return {
+          ran: ran,
+          max: Math.max(...ran),
+          min: Math.min(...ran),
+        };
+      }
+
+      const result = max_lists(20, 1000);
+
+      document.write(result.ran);
+      document.write("<br / > Maximum value: " + result.max);
+      document.write("<br / > Minimum value: " + result.min);
+    </script>
+  </body>
+</html>
